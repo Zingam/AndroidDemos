@@ -6,3 +6,4 @@ Experimental Android Apps
 ```
 
 * NativeLibrariesDemo - Demonstrates how to add native libraries to a project
+* SDL2AppTemplate - SDL2 application template for Android
