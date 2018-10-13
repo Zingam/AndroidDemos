@@ -22,11 +22,9 @@ android {
         externalNativeBuild {
             cmake {
                 // Passes optional arguments to CMake.
-                arguments "-DANDROID_ARM_NEON=TRUE", // Build with NEON support
-                        // Location on your host where CMake puts the LIBRARY target files when built.
-                        "-DNativeLibraryArtifactsOutputDir:STRING=${rootProject.ext.nativeLibraryArtifactsOutputDirectory}",
-                        "-DRootDir:STRING=${rootProject.rootDir}",
-                        "-DExternalLibrariesRootDir:STRING=${rootProject.ext.externalLibrariesDirectory}"
+                //        Location on your host where CMake puts the LIBRARY target files when built.
+                arguments "-DNativeLibraryArtifactsOutputDir:STRING=${rootProject.ext.nativeLibraryArtifactsOutputDirectory}"
+                arguments "-DExternalLibrariesRootDir:STRING=${rootProject.ext.externalLibrariesDirectory}"
             }
         }
     }

@@ -40,9 +40,11 @@ int main(int argc, char *argv[]) {
         for (int minorVersion = GL_MinorVersion; 0 <= minorVersion; --minorVersion) {
             SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, minorVersion);
             glContext = SDL_GL_CreateContext(window);
-            if (nullptr == glContext) {
-                continue;
+            if (nullptr != glContext) {
+                break;
             }
+        }
+        if (nullptr != glContext) {
             break;
         }
     }

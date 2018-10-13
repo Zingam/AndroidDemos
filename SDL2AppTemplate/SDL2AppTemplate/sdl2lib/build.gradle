@@ -21,11 +21,10 @@ android {
         externalNativeBuild {
             cmake {
                 // Passes optional arguments to CMake.
-                arguments "-DANDROID_ARM_NEON=TRUE", // Build with NEON support
-                          // Location on your host where CMake puts the LIBRARY target files when built.
-                          "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY:STRING=${rootProject.ext.nativeLibraryArtifactsOutputDirectory}/${project.name}",
-                          // Location on your host where CMake puts the STATIC LIBRARY target files when built.
-                          "-DCMAKE_ARCHIVE_OUTPUT_DIRECTORY:STRING=${rootProject.ext.nativeLibraryArtifactsOutputDirectory}/${project.name}"
+                //        Location on your host where CMake puts the LIBRARY target files when built.
+                arguments "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY:STRING=${rootProject.ext.nativeLibraryArtifactsOutputDirectory}/${project.name}"
+                //        Location on your host where CMake puts the STATIC LIBRARY target files when built.
+                arguments "-DCMAKE_ARCHIVE_OUTPUT_DIRECTORY:STRING=${rootProject.ext.nativeLibraryArtifactsOutputDirectory}/${project.name}"
 
                 // Specifies the library and executable targets from your CMake project
                 // that Gradle should build.
